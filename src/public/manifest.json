@@ -1,0 +1,18 @@
+{
+    "id": "restaurant-apps-1",
+    "start_url": "./index.html",
+    "name": "Restaurant Apps",
+    "short_name": "Restaurant",
+    "description": "Your description goes here",
+    "scope": ".",
+    "icons": [
+        {
+            "src": "./images/heros/hero-image_4.jpg",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+}

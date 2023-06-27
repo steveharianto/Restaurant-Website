@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="manifest" href="./webmanifest"/><title>Hunger Apps</title><script defer="defer" src="app.bundle.js"></script></head><body><button id="skip-to-content" class="skip-to-content hidden" tabindex="0">Menuju ke konten</button><header><nav><div class="nav-container"><h1 class="nav-title">Hunger Apps</h1><a href="#" class="hamburger" id="hamburger"><span></span> <span></span> <span></span></a><ul class="nav-links" id="nav-links"><li><a href="/">Home</a></li><li><a href="favourite.html">Favorite</a></li><li><a href="https://www.linkedin.com">About Us</a></li><li><a href="#explore-restaurants">Restaurants</a></li></ul></div></nav></header><button id="offlineInstallButton" hidden style="min-width: 44px; min-height: 44px">Download for offline use</button><main><section class="jumbotron"><img src="./images/heros/hero-image_4.jpg" alt="Hero image"/></section><section class="explore-restaurants" id="explore-restaurants"><div class="container"><h2 class="section-header">Explore Restaurants</h2><div class="restaurant-grid" id="all-restaurant-cards"></div></div></section></main><script>let deferredPrompt;
+
+            window.addEventListener("beforeinstallprompt", (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                document.getElementById("offlineInstallButton").hidden = false;
+            });
+
+            document.getElementById("offlineInstallButton").addEventListener("click", (e) => {
+                document.getElementById("offlineInstallButton").hidden = true;
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === "accepted") {
+                        console.log("User accepted the A2HS prompt");
+                    } else {
+                        console.log("User dismissed the A2HS prompt");
+                    }
+                    deferredPrompt = null;
+                });
+            });</script><footer><p>Copyright © 2020 - Hunger Apps</p></footer></body></html>

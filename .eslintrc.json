@@ -1,0 +1,13 @@
+{
+    "extends": "airbnb-base",
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "rules": {
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"]
+        // Add any additional rules or override existing rules as needed
+    }
+}

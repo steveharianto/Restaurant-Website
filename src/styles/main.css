@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links li a {
+    display: inline-block; /* Make the anchor element a block so padding takes effect */
+    padding: 10px 15px; /* Add padding to the anchor elements */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    min-height: 44px; /* Ensure minimum width is 44px */
+    text-align: center; /* Center the text within the padded area */
+}
+
+.nav-links li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Existing styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #f5f5f5;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    .nav-links li {
+        margin-top: 1rem;
+        margin-bottom: 1rem; /* Increase the vertical spacing between nav-links */
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 44px; /* Set the width to 44px */
+        height: 44px; /* Set the height to 44px */
+        padding: 10px; /* Add padding to ensure the spans are centered */
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.nav-title {
+    margin-right: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+    font-weight: bold; /* Add bold font weight */
+    font-size: 1.1em; /* Increase font size */
+}
+
+.jumbotron {
+    width: 100%;
+}
+
+.jumbotron img {
+    width: 100%;
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+.restaurant-card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.restaurant-card img {
+    width: 100%;
+    display: block;
+    height: 40%;
+    object-fit: cover;
+}
+
+.restaurant-card .name {
+    font-size: 2vw; /* Set the font size relative to the viewport width */
+}
+
+.restaurant-card .description {
+    font-size: 1vw; /* Set the font size relative to the viewport width */
+}
+
+.city-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.restaurant-card .rating {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.restaurant-card .name {
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.restaurant-card .description {
+    font-size: 0.9em;
+    padding: 0 1rem 1rem;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+@media (min-width: 768px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Remove Blue LInk */
+ul li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Detail */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links li a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: inherit;
+    min-height: 44px;
+    text-align: center;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Existing styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #f5f5f5;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    .nav-links li {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.nav-title {
+    margin-right: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.jumbotron {
+    width: 100%;
+}
+
+.jumbotron img {
+    width: 100%;
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+.restaurant-card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.restaurant-card img {
+    width: 100%;
+    display: block;
+    height: 40%;
+    object-fit: cover;
+}
+
+.restaurant-card .name {
+    font-size: 2vw;
+}
+
+.restaurant-card .description {
+    font-size: 1vw;
+}
+
+.city-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.restaurant-card .rating {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.restaurant-card .name {
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.restaurant-card .description {
+    font-size: 0.9em;
+    padding: 0 1rem 1rem;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+@media (min-width: 768px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Remove Blue Link */
+ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Restaurant */
+
+.containerRestaurant {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.restaurant-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.restaurant-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.restaurant-info p {
+    margin-bottom: 10px;
+}
+
+.categories-list,
+.menu-items,
+.reviews-list {
+    padding-left: 20px;
+}
+
+.menu-category {
+    margin-bottom: 20px;
+}
+
+.menu-category h4 {
+    margin-top: 0;
+}
+
+.reviews-list li {
+    margin-bottom: 10px;
+}
+
+.reviews-list li strong {
+    font-weight: bold;
+}
+
+/* Additional styling for visual enhancement */
+.container {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.restaurant-info {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-category {
+    flex-basis: 48%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}

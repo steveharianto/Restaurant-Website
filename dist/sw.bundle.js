@@ -1,0 +1,2 @@
+self.addEventListener("install",(function(t){t.waitUntil(caches.open("restaurant-apps-cache").then((function(t){return t.addAll(["/","/index.html","/detail.html","/favourite.html","/styles/main.css","/styles/detail.css","/styles/favourite.css","/scripts/index.js","/scripts/detail.js","/scripts/favourite.js","/scripts/sw.js"])})))})),self.addEventListener("fetch",(function(t){t.respondWith(caches.match(t.request).then((function(s){return s||fetch(t.request)})))}));
+//# sourceMappingURL=sw.bundle.js.map
